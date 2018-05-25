@@ -8,12 +8,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Download a copy of QuantumComputing.m and place this in the directory with the notebook you are trying to run. In an evaluation cell in your notebook, paste and evaluate the following command: Get[FileNameJoin[NotebookDirectory[], "QuantumComputing.m"]].
+Download a copy of QuantumComputing.m and place this in the directory with the notebook you are trying to run. In an evaluation cell in your notebook, paste and evaluate the following command:
 
 Say what the step will be
 
 ```
-Give the example
+Get[FileNameJoin[NotebookDirectory[], "QuantumComputing.m"]]
 ```
 
 And repeat
