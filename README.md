@@ -1,22 +1,14 @@
-# Project Title
+# QuantumComputing
 
-One Paragraph of project description goes here
+Symbolic Quantum Computing Package for the Wolfram Language. Includes support for qudits, mixed states, and generation of reversible quantum circuits from classical boolean functions.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Download a copy of QuantumComputing.m and place this in the directory with the notebook you are trying to run. In an evaluation cell in your notebook, paste and evaluate the following command: Get[FileNameJoin[NotebookDirectory[], "QuantumComputing.m"]].
 
 Say what the step will be
 
