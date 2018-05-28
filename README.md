@@ -42,6 +42,7 @@ returns a list of the canonical basis states for the system. Keywords include
 * Plot
 * BlochPlot
 * NumberOfQudits
+* QuditDimension
 * PureStateQ
 * MixedStateQ
 
@@ -121,8 +122,42 @@ Recognized matrix operations include
 * RotY
 * RotZ
 
+For measurements, you must specify the type of measurement as either "Observable" or "POVM". For example, to instantiate a projective measurement in the x basis, one would call
 
+```
+QuantumMatrixOperation["Observable" -> "SigmaX"]
+```
 
+Like quantum states, both matrix operations and measurements have properties that can be extracted.
+
+For `QuantumMatrixOperation`, these include
+
+* MatrixRepresentation
+* Arity
+* QuditDimension
+* UnitaryQ
+* HermitianQ
+
+and for `QuantumMeasurement`,
+
+* Arity
+* QuditDimension
+* MeasurementType
+* POVM (POVM only)
+* Eigenvalues (Observable only)
+* Eigenvectors (Observable only)
+
+### Circuits
+
+In `QuantumComputing`, circuits are represented by the `QuantumCircuit` symbol. These circuits consist of unitary operations, projective measurements, and control flow that allows for classically conditioned operations and repeat-until-success (RUS) measurements, which allow for the simulation of nonlinearity with finite dimensional quantum states. 
+
+circuits can be concatenated effortlessly with "+", and reversible quantum circuits for (quantum versions of) Boolean functions can be generated automatically with
+
+```
+QuantumCircuit["BooleanFunction" -> bf]
+```
+
+where bf is a BooleanFunction in Mathematica.
 
 ## Authors
 
