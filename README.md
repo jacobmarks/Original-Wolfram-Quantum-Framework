@@ -26,7 +26,7 @@ The symbol notebooks illustrate the full scope of capabilities of the package. T
 ```
 qs = QuantumFiniteDimensionalState[{{"BasisState", {0}}]
 ```
-Extract information about the quantum state such as its purity, Von Neumann entropy, and number of qubits using keywords. For example, 
+Extract information about the quantum state such as its purity, Von Neumann entropy, and number of qudits using keywords. For example, 
 
 ```
 qs["BasisStates"]
@@ -34,8 +34,17 @@ qs["BasisStates"]
 
 returns a list of the canonical basis states for the system. Keywords include
 
-.* Purity
-.* VonNeumannEntropy
+* StateVector
+* DensityMatrix
+* Purity
+* VonNeumannEntropy
+* BasisStates
+* Plot
+* BlochPlot
+* NumberOfQudits
+* PureStateQ
+* MixedStateQ
+
 
 ## Authors
 
