@@ -15,12 +15,16 @@ Get[FileNameJoin[NotebookDirectory[], "QuantumComputing.m"]]
 ```
 
 
-### Capabilities
+## Capabilities
 
-TO DO
+The symbol notebooks illustrate the full scope of capabilities of the package. The documentation includes usage syntax, examples, and more involved applications. This section does not attempt to duplicate the complete documentation for the package. Instead, its purpose is to introduce the reader to the essentials.
+
+### QuantumFiniteDimensionalState
+
+`QuantumFiniteDimensionalState` is the generic symbol used for declaring quantum states. Continuous states are not yet supported. Create a two-level quantum system, or "qubit", in the "0" computational basis state:
 
 ```
-Give an example
+QuantumFiniteDimensionalState[{{"BasisState", {0}}]
 ```
 
 
