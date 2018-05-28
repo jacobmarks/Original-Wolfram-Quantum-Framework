@@ -19,7 +19,7 @@ Get[FileNameJoin[NotebookDirectory[], "QuantumComputing.m"]]
 
 The symbol notebooks illustrate the full scope of capabilities of the package. The documentation includes usage syntax, examples, and more involved applications. This section does not attempt to duplicate the complete documentation for the package. Instead, its purpose is to introduce the reader to the essentials.
 
-### QuantumFiniteDimensionalState
+### States
 
 `QuantumFiniteDimensionalState` is the generic symbol used for declaring quantum states. Continuous states are not yet supported. Create a two-level quantum system, or "qubit", in the "0" computational basis state:
 
@@ -45,11 +45,84 @@ returns a list of the canonical basis states for the system. Keywords include
 * PureStateQ
 * MixedStateQ
 
-QuantumFiniteDimensionalState accepts as inputs both numerical (or symbolic) arrays and keywords for recognized states. To make a symbolic qutrit with complex coefficients \alpha, \beta and \gamma for basis states 0, 1, and 2 respectively, one would write
+QuantumFiniteDimensionalState accepts as inputs both numerical (or symbolic) arrays and keywords for recognized states. To make a symbolic qutrit with complex coefficients a, b and c for basis states 0, 1, and 2 respectively, one would write
 
 ```
-QuantumFiniteDimensionalState[{{\alpha, \beta, \gamma}, "QuditDimension" -> 3]
+QuantumFiniteDimensionalState[{{a, b, c}}, "QuditDimension" -> 3]
 ```
+
+Note qudits of arbitrary dimension, or spin-d/2 particles, are fully supported. This support extends to the measurements and matrix operations described below.
+
+Alternatively, one could generate the PhiPlus Bell state with
+
+```
+QuantumFiniteDimensionalState[{"PhiPlus"}]
+```
+
+Some recognized states include
+
+* Plus
+* Minus
+* Left
+* Right
+* PhiPlus
+* PhiMinus
+* PsiPlus
+* PsiMinus
+* GHZ
+* W
+
+New quantum states can be obtained by modifying existing quantum states using the symbols `QuantumProduct`,`QuantumProduct`, and `QuantumPartialTr`. `QuantumProduct` generates tensor product states. `QuantumMixture` generates a mixed quantum state from a statistical ensemble of quantum states with given classical probabilities. And `QuantumPartialTr` can be used to trace out speficied subsystems from a quantum state. 
+
+### Operators
+
+Operators are split into two classes: `QuantumMatrixOperation`, which includes but is not limited to the unitary operations that serve as gates in a quantum circuit, and `QuantumMeasurement`, which can be used to specify either a projective measurement, traditionally representing an observable, or a generalized positive operator valued measurement (POVM).
+
+For matrix operations, for example, one could generate a Hadamard gate either explicitly via input array:
+
+```
+h = 1/Sqrt[2] {{1, 1}, {1, -1}};
+QuantumMatrixOperation[h]
+```
+or via keyword:
+
+```
+QuantumMatrixOperation["Hadamard"]
+```
+
+With the "QuditDimension" Option, one can obtain the d-level version of a quantum matrix operation if it is sensible. For instance:
+
+```
+QuantumMatrixOperation["SigmaZ", "QuditDimension" -> 5]
+```
+
+generates the Pauli Z operator acting on 5-level systems.
+
+Recognized matrix operations include
+
+* SigmaX
+* SigmaY
+* SigmaZ
+* SigmaPlus
+* SigmaMinus
+* Hadamard
+* S
+* T
+* CNOT
+* CPHASE
+* SWAP
+* Deutsch
+* Fredkin
+* Toffoli
+* Fourier
+* SUM
+* RandomUnitary
+* RotX
+* RotY
+* RotZ
+
+
+
 
 ## Authors
 
@@ -62,3 +135,4 @@ QuantumFiniteDimensionalState[{{\alpha, \beta, \gamma}, "QuditDimension" -> 3]
 * Jose Martin-Garcia
 * Cesar Guerra
 * Xavier Roy
+* Wolfram Research Algorithms R&D
