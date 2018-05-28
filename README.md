@@ -159,6 +159,12 @@ QuantumCircuit["BooleanFunction" -> bf]
 
 where bf is a BooleanFunction in Mathematica.
 
+### Evaluation
+
+`QuantumEvaluate` can be used to evaluate the action of measurements, matrix operations, and entire quantum circuits on quantum states. The "Trials" Option allows for efficient generation of an arbitrary number of simulation outcomes.
+
+`QuantumEvaluate` is designed with the flexibility to interface with an API to a real quantum computer, such as IBM's QuantumExperience. The "Backend" Option is now set with default "ClassicalSimulator", but the underlying code could be extended such that "Backend" -> "IBM" passes the evaluation along to IBM's quantum computer. The details of such an extension to this package are still in progress.
+
 ## Authors
 
 * **Jacob Marks**  - (jamarks@stanford.edu or jacobm@wolfram.com)
