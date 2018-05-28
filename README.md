@@ -24,10 +24,18 @@ The symbol notebooks illustrate the full scope of capabilities of the package. T
 `QuantumFiniteDimensionalState` is the generic symbol used for declaring quantum states. Continuous states are not yet supported. Create a two-level quantum system, or "qubit", in the "0" computational basis state:
 
 ```
-QuantumFiniteDimensionalState[{{"BasisState", {0}}]
+qs = QuantumFiniteDimensionalState[{{"BasisState", {0}}]
+```
+Extract information about the quantum state such as its purity, Von Neumann entropy, and number of qubits using keywords. For example, 
+
+```
+qs["BasisStates"]
 ```
 
+returns a list of the canonical basis states for the system. Keywords include
 
+.* Purity
+.* VonNeumannEntropy
 
 ## Authors
 
