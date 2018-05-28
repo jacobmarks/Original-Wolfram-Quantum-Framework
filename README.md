@@ -45,6 +45,11 @@ returns a list of the canonical basis states for the system. Keywords include
 * PureStateQ
 * MixedStateQ
 
+QuantumFiniteDimensionalState accepts as inputs both numerical (or symbolic) arrays and keywords for recognized states. To make a symbolic qutrit with complex coefficients \alpha, \beta and \gamma for basis states 0, 1, and 2 respectively, one would write
+
+```
+QuantumFiniteDimensionalState[{{\alpha, \beta, \gamma}, "QuditDimension" -> 3]
+```
 
 ## Authors
 
