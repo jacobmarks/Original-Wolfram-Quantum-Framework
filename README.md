@@ -1,6 +1,6 @@
 # QuantumComputing
 
-Symbolic Quantum Computing Package for the Wolfram Language. Includes support for qudits, mixed states, and generation of reversible quantum circuits from classical boolean functions. This package began as a project during the Wolfram Summer School 2017, and grew into an internship in Algorithms R&D for Wolfram Research.
+Original version of the Symbolic Quantum Computing Package for the Wolfram Language. Includes support for qudits, mixed states, and generation of reversible quantum circuits from classical boolean functions. This package began as a project during the Wolfram Summer School 2017, spun out as an internship in Algorithms R&D for Wolfram Research, and has since grown to become the [Wolfram Quantum Computing Framework](https://www.wolframcloud.com/obj/wolframquantumframework/DeployedResources/Paclet/Wolfram/QuantumFramework/).
 
 ## Getting Started
 
@@ -167,7 +167,7 @@ where bf is a BooleanFunction in Mathematica.
 
 ## Authors
 
-* **Jacob Marks**  - (jamarks@stanford.edu or jacobm@wolfram.com)
+* **Jacob Marks**  - jamarks13@gmail.com (prev. jamarks@stanford.edu and jacobm@wolfram.com)
 
 
 ## Acknowledgments
